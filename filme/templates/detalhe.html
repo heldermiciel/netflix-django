@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>serflix</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/detahes.css' %}">
+</head>
+<body>
+
+    <header>
+        <a href="{% url 'filme:homefilmes'%}">
+        <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" >
+         </a>
+        <nav>
+            <form action="{% url 'filme:pesquisa'%}" method="get">
+                <input type="text" name="query">
+                <input type="submit" value="pesquisa">
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <section class="principal">
+            <div class="foto">
+                <img src="{{object.thumb.url}}" alt="foto">
+            </div>
+            <div class="descricao">
+                <h2>nome: {{object.titulo}}</h2>
+                <p class="texto"><strong>descricao:</strong> {{object.descricao}}</p>
+            </div>
+            <div class="episodio">
+                <h2>episodios:</h2>
+                {% for episodio in object.episodio.all %}
+                    <p><a href="{{episodio.link}}">{{episodio.titulo}}</a></p>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="relacionados">
+            {% for filme in relacionado.all %}
+                <div>
+                    <a href="{% url 'filme:detalhes' filme.pk %}">
+
+                        <img src="{{filme.thumb.url}}" alt="foto">
+                        <p>{{filme.titulo}}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>

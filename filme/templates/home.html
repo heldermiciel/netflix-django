@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'filme:homefilmes'%}">
+                <img src="{% static 'img/logo.png' %}" alt="logo">
+            </a>
+        </div>
+    </header>
+    <section>
+
+        <h1>filmes e series via mega 100% gratis </h1>
+        <div>
+            <form action="{% url 'filme:pesquisa'%}" method="get">
+
+                <input type="text" maxlength="80" class="text" name="query">
+                <input type="submit" value="pesquisa" class="bottum">
+            </form>
+        </div>
+        <div class="mono">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi exercitationem ad enim? Et, dolorum culpa autem magni enim fugiat fugit dicta praesentium quidem ex distinctio dolores esse rerum. Expedita, delectus?</p>
+        </div>
+
+    </section>
+</body>
+</html>

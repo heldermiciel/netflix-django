@@ -1,0 +1,81 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.39);
+    color: rgb(255, 255, 255);
+    background-image: url(../img/catalogo.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(168, 7, 7);
+    height: 100px;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+header a{
+    width: 10%;
+    height: 30px;
+}
+
+.logo{
+    height: 30px;
+    width: 100%;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    
+}
+h2{
+    padding: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.pesquisa{
+    padding: 10x;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    height: 720px;
+
+}
+
+.resultado div{
+    width: 15%;
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}

@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/catalogo.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.562);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    background-color: rgb(168, 7, 7);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+}
+
+section{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+h1{
+    font-size: 2em;
+    margin-bottom: 100px;
+}
+
+.text{
+    height: 30px;
+    width: 400px;
+    padding: 5px;
+}
+
+.bottum{
+    width: 100px;
+    height: 15;
+    padding: 5px;
+    background-color: rgb(177, 6, 6);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(156, 155, 155);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.mono{
+    width: 400px;
+    text-align: center;
+}
+.logo{
+    width: 300px;
+}
+
+img{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}

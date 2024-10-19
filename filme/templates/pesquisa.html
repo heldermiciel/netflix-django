@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>pesquisa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/pesquisa.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'filme:homefilmes'%}">
+        <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" >
+         </a>
+        <nav>
+            <form action="{% url 'filme:pesquisa'%}" method="get">
+                <input type="text" name="query">
+                <input type="submit" value="pesquisa">
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section class="pesquisa">
+            <div>
+                <h2>resultados da pesquisa:</h2>
+            </div>
+
+            <div class="resultado">
+                {% for filme in object_list.all %}
+                    <div>
+                        <a href="{% url 'filme:detalhes' filme.pk %}">
+
+                            <img src="{{filme.thumb.url}}" alt="foto">
+                            <p>{{filme.titulo}}</p>
+                        </a>
+                    </div>
+                 {% endfor %}
+            </div>
+            
+
+        </section>
+        
+    </main>
+</body>
+</html>
